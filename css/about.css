@@ -107,6 +107,7 @@ nav .nav-links .active {
 #sidebar {
   grid-area: sidebar;
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
 }
@@ -123,19 +124,20 @@ nav .nav-links .active {
   transition: all ease-in-out 0.3s;
 }
 #sidebar .profile img:hover {
-  transform: scale(1.1) rotateZ(-3deg);
+  transform: scale(1.05) rotateZ(-3deg);
 }
 #sidebar #info {
-  width: 100%;
+  width: auto;
   height: 50%;
   text-align: left;
-  font-size: 15px;
   display: flex;
   justify-content: center;
 }
 #sidebar #info p {
+  font-size: 0.8vw;
   margin-top: 10px;
   margin-bottom: 10px;
+  line-height: 15px;
   height: auto;
   width: 85%;
 }
@@ -146,6 +148,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 main .tree-view {
   height: 100%;
@@ -177,14 +180,14 @@ main .tree-view .text .header {
 }
 main .tree-view .text .header h1 {
   color: black;
-  font-size: 40px;
+  font-size: 2.5vw;
   padding: 10px;
 }
 main .tree-view .contents {
   width: 100%;
   height: 100%;
   color: black;
-  font-size: 20px;
+  font-size: 1vw;
   text-align: left;
   line-height: 27px;
   padding: 15px 25px 15px 30px;
@@ -221,14 +224,51 @@ footer p {
   .container {
     width: 80vw;
     height: 85vh;
+    grid-template-rows: 0.2fr 0.4fr 1fr 0.2fr;
   }
 
   nav {
     flex-direction: column;
-    line-height: 50px;
+    line-height: 40px;
   }
 
   .container {
-    grid-template-areas: "nav    nav    nav    nav      " "main   main   main   main  " "main   main   main   main  " "footer footer footer footer   ";
+    grid-template-areas: "nav       nav       nav       nav      " "sidebar   sidebar   sidebar   sidebar  " "main      main      main      main     " "footer    footer    footer    footer   ";
+  }
+
+  #sidebar {
+    flex-direction: row;
+  }
+  #sidebar .profile {
+    width: 50%;
+    height: 100%;
+  }
+  #sidebar .profile img {
+    width: 50%;
+  }
+  #sidebar #info {
+    width: 50%;
+    height: 100%;
+    align-items: center;
+  }
+  #sidebar #info p {
+    width: 100%;
+    font-size: 1.5vw;
+  }
+
+  main .tree-view .text .header {
+    text-align: center;
+  }
+
+  main .tree-view .text .header h1 {
+    font-size: 4vw;
+  }
+
+  main .tree-view .contents {
+    font-size: 2vw;
+  }
+
+  footer p {
+    font-size: 3vw;
   }
 }/*# sourceMappingURL=about.css.map */

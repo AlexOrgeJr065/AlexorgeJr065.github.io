@@ -235,7 +235,7 @@ main {
         li {
             height: 100%;
             width: 100%;
-            /* overflow-y: scroll; */
+            overflow-y: scroll;
         }
 
         .text {
@@ -348,7 +348,7 @@ footer {
 
     nav {
         flex-direction: column;
-        line-height: 50px;
+        line-height: 40px;
     }
 
     .container {
@@ -359,7 +359,23 @@ footer {
         "footer footer footer footer   ";
     }
 
+    main .tree-view .contents .title h1 {
+        font-size: 4.5vw;
+    }
+
+    main .tree-view .contents .contact-box .input-field {
+        width: 65vw;
+    }
+
+    main .tree-view .contents .contact-box {
+        width: 70vw;
+    }
+
     #sidebar {
         display: none;
+    }
+
+    footer p {
+        font-size: 3vw;
     }
 }

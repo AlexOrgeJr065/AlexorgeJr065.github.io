@@ -279,7 +279,7 @@ footer p {
 
   nav {
     flex-direction: column;
-    line-height: 50px;
+    line-height: 40px;
   }
 
   .container {
@@ -297,5 +297,9 @@ footer p {
 
   main .tree-view .contents .link a button {
     font-size: 1.5vw;
+  }
+
+  footer p {
+    font-size: 3vw;
   }
 }/*# sourceMappingURL=home.css.map */
