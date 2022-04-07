@@ -91,15 +91,26 @@ nav {
     justify-content: space-evenly;
     align-items: center;
 
-    .logo h4:hover {
-        cursor: pointer;
-        color: blue;
+    .logo {
+        width: auto;
+        height: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h4:hover {
+            cursor: pointer;
+            color: blue;
+        }
     }
 
     .nav-links {
         display: flex;
         justify-content: space-around;
+        align-items: center;
         width: 35%;
+        height: 100%;
 
         li {
             list-style-type: none;
@@ -272,17 +283,22 @@ footer {
         grid-template-rows: 0.2fr 0.4fr 1fr 0.2fr;
     }
 
-    nav {
-        flex-direction: column;
-        line-height: 40px;
-    }
-
     .container {
         grid-template-areas:
         "nav       nav       nav       nav      "
         "sidebar   sidebar   sidebar   sidebar  "
         "main      main      main      main     "
         "footer    footer    footer    footer   ";
+    }
+
+    nav {
+        flex-direction: column;
+        line-height: 40px;
+
+        .nav-links {
+            height: 41%;
+            width: 40vw;
+        }
     }
 
     #sidebar {
