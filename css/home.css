@@ -16,20 +16,25 @@ body {
   width: 70vw;
   height: 80vh;
 }
+
 .window pre {
   height: 85.6vh;
   display: flex;
   justify-content: center;
 }
+
 .window .title-bar button:nth-child(1) {
   cursor: pointer;
 }
+
 .window .title-bar button:nth-child(2) {
   cursor: pointer;
 }
+
 .window .title-bar button:nth-child(3) {
   cursor: pointer;
 }
+
 .window img {
   width: auto;
   height: 10px;
@@ -38,6 +43,7 @@ body {
 .button {
   position: absolute;
 }
+
 .button:focus {
   outline: none;
 }
@@ -62,7 +68,7 @@ body {
   height: 70vh;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 0.2fr 1fr 1fr 0.2fr;
-  grid-template-areas: "nav    nav    nav    nav      " "main   main   main   sidebar  " "main   main   main   sidebar  " "footer footer footer footer   ";
+  grid-template-areas: "nav    nav    nav    nav      " "main   main   main   sidebar  " "main   main   main   sidebar  " "footer footer footer footer   ";
   grid-gap: 20px;
   text-align: center;
 }
@@ -78,6 +84,7 @@ nav {
   justify-content: space-evenly;
   align-items: center;
 }
+
 nav .logo {
   width: auto;
   height: 100%;
@@ -85,10 +92,12 @@ nav .logo {
   justify-content: center;
   align-items: center;
 }
+
 nav .logo h4:hover {
   cursor: pointer;
   color: blue;
 }
+
 nav .nav-links {
   display: flex;
   justify-content: space-around;
@@ -96,9 +105,11 @@ nav .nav-links {
   width: 35%;
   height: 100%;
 }
+
 nav .nav-links li {
   list-style-type: none;
 }
+
 nav .nav-links li a {
   width: 500px;
   text-decoration: none;
@@ -106,36 +117,43 @@ nav .nav-links li a {
   font-size: 20px;
   padding: 5px 30px;
 }
+
 nav .nav-links li a:hover {
   color: blue;
 }
+
 nav .nav-links .active {
   color: blue;
 }
 
 #sidebar {
-  background: rgba(0, 0, 0, 0.5);
   grid-area: sidebar;
+  position: relative;
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
   flex-direction: column;
-  position: relative;
 }
+
 #sidebar:hover .profile img {
   filter: blur(0px);
   -webkit-filter: blur(0px);
 }
+
 #sidebar:hover #info p {
   color: transparent;
   text-shadow: 0 0 0 white;
   border: 0px solid black;
 }
+
 #sidebar:hover .point {
   border: 0 solid black;
 }
+
 #sidebar:hover .point p {
   color: transparent;
 }
+
 #sidebar .profile {
   display: flex;
   justify-content: center;
@@ -143,6 +161,7 @@ nav .nav-links .active {
   height: 50%;
   width: 100%;
 }
+
 #sidebar .profile img {
   width: 70%;
   height: auto;
@@ -150,6 +169,7 @@ nav .nav-links .active {
   -webkit-filter: blur(8px);
   transition: all ease-in-out 0.3s;
 }
+
 #sidebar #info {
   height: 50%;
   width: auto;
@@ -159,6 +179,7 @@ nav .nav-links .active {
   justify-content: center;
   align-items: center;
 }
+
 #sidebar #info p {
   text-align: center;
   font-size: 2.5vw;
@@ -168,6 +189,7 @@ nav .nav-links .active {
   text-shadow: 0 0 15px white;
   transition: all ease-in-out 0.3s;
 }
+
 #sidebar .point {
   border: 3px solid black;
   display: flex;
@@ -182,6 +204,7 @@ nav .nav-links .active {
   left: 30%;
   overflow: hidden;
 }
+
 #sidebar .point p {
   color: black;
   font-weight: bold;
@@ -195,6 +218,7 @@ main {
   justify-content: center;
   align-items: center;
 }
+
 main .tree-view {
   height: 100%;
   width: 100%;
@@ -203,16 +227,19 @@ main .tree-view {
   padding-right: 3px;
   padding-bottom: 6.6px;
 }
+
 main .tree-view li {
   height: 100%;
   width: 100%;
   overflow-y: scroll;
 }
+
 main .tree-view .text {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 main .tree-view .contents {
   width: 100%;
   height: 100%;
@@ -224,8 +251,10 @@ main .tree-view .contents {
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-  padding: 15px 25px 15px 30px;
+  padding: 25px 25px;
+  /* (Top Right Down Left) or (Top & Bottom | Left & Right) */
 }
+
 main .tree-view .contents .title {
   width: 100%;
   height: 70px;
@@ -235,35 +264,39 @@ main .tree-view .contents .title {
   justify-content: center;
   align-items: center;
 }
+
 main .tree-view .contents .title h1 {
   font-size: 40px;
 }
+
 main .tree-view .contents .Image1 img, main .tree-view .contents .Image2 img {
   height: auto;
   width: 37vw;
   margin-top: 20px;
   transition: all ease-in-out 0.3s;
 }
-main .tree-view .contents .Image1 img:hover, main .tree-view .contents .Image2 img:hover {
-  transform: scale(1.05);
-}
+
 main .tree-view .contents .Image1, main .tree-view .contents .Image2 {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 main .tree-view .contents .link {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
 main .tree-view .contents .link a button {
   font-size: 1vw;
   padding: 10px;
 }
+
 main .tree-view .contents .link a button:hover {
   cursor: pointer;
 }
-main .tree-view .contents hr.dashed {
+
+main .tree-view .contents .dashed {
   border-top: 3px dashed black;
   width: 100%;
 }
@@ -274,26 +307,25 @@ footer {
   justify-content: center;
   align-items: center;
 }
+
 footer p {
   font-size: 20px;
   font-weight: bold;
 }
 
+/* Responsive Design */
 @media screen and (max-width: 1100px) {
   .window {
     width: 100%;
     height: 100%;
   }
-
   .container {
     width: 80vw;
     height: 85vh;
   }
-
   .container {
-    grid-template-areas: "nav    nav    nav    nav      " "main   main   main   main  " "main   main   main   main  " "footer footer footer footer   ";
+    grid-template-areas: "nav    nav    nav    nav      " "main   main   main   main  " "main   main   main   main  " "footer footer footer footer   ";
   }
-
   nav {
     flex-direction: column;
     line-height: 40px;
@@ -302,21 +334,43 @@ footer p {
     height: 41%;
     width: 40vw;
   }
-
   #sidebar {
     display: none;
   }
-
   main .tree-view .contents .Image1 img, main .tree-view .contents .Image2 img {
     height: auto;
     width: 60vw;
   }
-
   main .tree-view .contents .link a button {
     font-size: 1.5vw;
   }
-
   footer p {
     font-size: 3vw;
   }
-}/*# sourceMappingURL=home.css.map */
+}
+
+@media screen and (min-width: 1920px) {
+  .window {
+    width: 1344px;
+  }
+  .container {
+    width: 1248px;
+  }
+  main .tree-view .contents .Image1 img,
+  main .tree-view .contents .Image2 img {
+    width: 710.4px;
+  }
+  main .tree-view .contents .link a button {
+    font-size: 19.2px;
+  }
+  #sidebar .profile img {
+    width: 207px;
+  }
+  #sidebar .point {
+    font-size: 19.2px;
+  }
+  #sidebar #info p {
+    font-size: 48px;
+  }
+}
+/*# sourceMappingURL=home.css.map */
