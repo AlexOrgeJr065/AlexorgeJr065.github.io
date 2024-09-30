@@ -68,7 +68,10 @@ body {
   height: 70vh;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 0.2fr 1fr 1fr 0.2fr;
-  grid-template-areas: "nav    nav    nav    nav      " "main   main   main   sidebar  " "main   main   main   sidebar  " "footer footer footer footer   ";
+  grid-template-areas: "nav    nav    nav    nav      "
+ "main   main   main   sidebar  "
+ "main   main   main   sidebar  "
+ "footer footer footer footer   ";
   grid-gap: 20px;
   text-align: center;
 }
@@ -127,6 +130,7 @@ nav .nav-links .active {
 }
 
 #sidebar {
+  display: none;
   grid-area: sidebar;
   position: relative;
   background: rgba(0, 0, 0, 0.5);
@@ -324,7 +328,10 @@ footer p {
     height: 85vh;
   }
   .container {
-    grid-template-areas: "nav    nav    nav    nav      " "main   main   main   main  " "main   main   main   main  " "footer footer footer footer   ";
+    grid-template-areas: "nav    nav    nav    nav      "
+ "main   main   main   main  "
+ "main   main   main   main  "
+ "footer footer footer footer   ";
   }
   nav {
     flex-direction: column;
