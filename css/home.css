@@ -133,7 +133,7 @@ nav .nav-links .active {
   grid-area: sidebar;
   position: relative;
   background: rgba(0, 0, 0, 0.5);
-  display: flex;
+  display: none;
   align-items: center;
   flex-direction: column;
 }
